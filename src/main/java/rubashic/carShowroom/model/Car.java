@@ -1,12 +1,18 @@
 package rubashic.carShowroom.model;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.Id;
 import lombok.*;
 
-import java.time.LocalDate;
 
-@Data
-@Builder
+@Getter
+@Setter
+@Entity
 public class Car {
+    @Id
+    @GeneratedValue
+    private Long id;
     @NonNull
     private String mark;
     @NonNull
